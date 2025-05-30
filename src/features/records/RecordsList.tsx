@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useGetRecordsQuery } from "../api/apiSlice";
+import { useGetFieldsQuery, useGetRecordsQuery } from "../api/apiSlice";
 import InfiniteScroll from "react-infinite-scroll-component";
-import type { Record } from "../../types";
+import type { Field, Record } from "../../types";
+import { Table } from "antd";
 
 const RecordsList: React.FC = () => {
   const [page, setPage] = useState(0);
-  const limit = 5;
+  const limit = 10;
 
   const {
     data: records,
@@ -15,6 +16,38 @@ const RecordsList: React.FC = () => {
   } = useGetRecordsQuery({ page, limit });
 
   const [allRecords, setAllRecords] = useState<Record[]>([]);
+
+  const { data: columns } = useGetFieldsQuery();
+
+  // const columns = [
+  //   {
+  //     title: "Name",
+  //     dataIndex: "name",
+  //     key: "name",
+  //   },
+  //   {
+  //     title: "Age",
+  //     dataIndex: "age",
+  //     key: "age",
+  //   },
+  //   {
+  //     title: "Address",
+  //     dataIndex: "address",
+  //     key: "address",
+  //   },
+  // ];
+
+  const getAntdRecords = (records: Record[] | undefined) => {
+    return records?.map((field) => ({ ...field, key: field.id }));
+  };
+
+  const getAntdColumns = (columns: Field[] | undefined) => {
+    return columns?.map(({ id, name, key }) => ({
+      title: name,
+      key: id,
+      dataIndex: key,
+    }));
+  };
 
   useEffect(() => {
     if (records) {
@@ -39,7 +72,12 @@ const RecordsList: React.FC = () => {
         loader={<h4>Загрузка...</h4>}
         endMessage={<p>Больше нет данных для отображения</p>}
       >
-        <table>
+        <Table
+          dataSource={getAntdRecords(allRecords)}
+          columns={getAntdColumns(columns)}
+          pagination={false}
+        ></Table>
+        {/* <table>
           <thead>
             <tr>
               <th>ID</th>
@@ -58,7 +96,7 @@ const RecordsList: React.FC = () => {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table> */}
       </InfiniteScroll>
       {isFetching && page > 1 && <div>Загрузка...</div>}
     </div>

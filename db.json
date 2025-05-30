@@ -1,20 +1,20 @@
 {
     "fields": [
-      { "id": 1, "name": "firstName", "type": "string" },
-      { "id": 2, "name": "lastName", "type": "string" },
-      { "id": 3, "name": "age", "type": "number" },
-      { "id": 4, "name": "email", "type": "string" },
-      { "id": 5, "name": "phone", "type": "string" },
-      { "id": 6, "name": "address", "type": "string" },
-      { "id": 7, "name": "city", "type": "string" },
-      { "id": 8, "name": "postalCode", "type": "number" },
-      { "id": 9, "name": "country", "type": "string" },
-      { "id": 10, "name": "company", "type": "string" },
-      { "id": 11, "name": "position", "type": "string" },
-      { "id": 12, "name": "salary", "type": "number" },
-      { "id": 13, "name": "startDate", "type": "string" },
-      { "id": 14, "name": "endDate", "type": "string" },
-      { "id": 15, "name": "status", "type": "string" }
+      { "id": 1, "name": "Имя", "key": "firstName", "type": "string" },
+      { "id": 2, "name": "Фамилия", "key": "lastName", "type": "string" },
+      { "id": 3, "name": "Возраст", "key": "age", "type": "number" },
+      { "id": 4, "name": "Email", "key": "email", "type": "string" },
+      { "id": 5, "name": "Номер телефона", "key": "phone", "type": "string" },
+      { "id": 6, "name": "Адрес", "key": "address", "type": "string" },
+      { "id": 7, "name": "Город", "key": "city", "type": "string" },
+      { "id": 8, "name": "Индекс", "key": "postalCode", "type": "number" },
+      { "id": 9, "name": "Страна", "key": "country", "type": "string" },
+      { "id": 10, "name": "Компания", "key": "company", "type": "string" },
+      { "id": 11, "name": "Позиция", "key": "position", "type": "string" },
+      { "id": 12, "name": "Зарплата", "key": "salary", "type": "number" },
+      { "id": 13, "name": "Дата выхода", "key": "startDate", "type": "string" },
+      { "id": 14, "name": "Дата окончания", "key": "endDate", "type": "string" },
+      { "id": 15, "name": "Статус", "key": "status", "type": "string" }
     ],
     "records": [
       {

@@ -1,6 +1,7 @@
 export interface Field {
   id: number;
   name: string;
+  key: string;
   type: "string" | "number";
 }
 
