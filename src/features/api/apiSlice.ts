@@ -10,7 +10,18 @@ export const apiSlice = createApi({
       query: () => "fields",
       providesTags: ["Fields"],
     }),
-
+    newGetFields: builder.query<Field[], void>({
+      query: () => "newField",
+      providesTags: ["Fields"],
+    }),
+    addField: builder.mutation<Field, Partial<Field>>({
+      query: (newField) => ({
+        url: "filds",
+        method: "POST",
+        body: newField,
+      }),
+      invalidatesTags: ["Fields"],
+    }),
     getRecords: builder.query<Record[], { page: number; limit: number }>({
       query: ({ page, limit }) =>
         `records?_start=${page * limit}&_limit=${limit}`,
@@ -56,8 +67,10 @@ export const apiSlice = createApi({
 
 export const {
   useGetFieldsQuery,
+  useNewGetFieldsQuery,
   useGetRecordsQuery,
   useAddRecordMutation,
   useUpdateRecordMutation,
   useDeleteRecordMutation,
+  useAddFieldMutation,
 } = apiSlice;

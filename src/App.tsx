@@ -1,14 +1,14 @@
 import React from "react";
 import RecordsList from "./features/records/RecordsList";
-// import AddRecordForm from "./features/records/AddRecordForm";
-import { Button } from "antd";
+import AddRecord from "./features/records/AddRecord";
+import "./App.css";
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div className="page-wrapper">
       <h1>Управление Записями</h1>
-      <Button type="primary">Добавить запись</Button>
-      {/* <AddRecordForm /> */}
+
+      <AddRecord />
       <RecordsList />
     </div>
   );

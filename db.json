@@ -1,144 +1,234 @@
 {
-    "fields": [
-      { "id": 1, "name": "Имя", "key": "firstName", "type": "string" },
-      { "id": 2, "name": "Фамилия", "key": "lastName", "type": "string" },
-      { "id": 3, "name": "Возраст", "key": "age", "type": "number" },
-      { "id": 4, "name": "Email", "key": "email", "type": "string" },
-      { "id": 5, "name": "Номер телефона", "key": "phone", "type": "string" },
-      { "id": 6, "name": "Адрес", "key": "address", "type": "string" },
-      { "id": 7, "name": "Город", "key": "city", "type": "string" },
-      { "id": 8, "name": "Индекс", "key": "postalCode", "type": "number" },
-      { "id": 9, "name": "Страна", "key": "country", "type": "string" },
-      { "id": 10, "name": "Компания", "key": "company", "type": "string" },
-      { "id": 11, "name": "Позиция", "key": "position", "type": "string" },
-      { "id": 12, "name": "Зарплата", "key": "salary", "type": "number" },
-      { "id": 13, "name": "Дата выхода", "key": "startDate", "type": "string" },
-      { "id": 14, "name": "Дата окончания", "key": "endDate", "type": "string" },
-      { "id": 15, "name": "Статус", "key": "status", "type": "string" }
-    ],
-    "records": [
-      {
-        "id": 1,
-        "firstName": "Иван",
-        "lastName": "Иванов",
-        "age": 30,
-        "email": "ivan.ivanov@example.com",
-        "phone": "123-456-7890",
-        "address": "ул. Ленина, д. 10",
-        "city": "Москва",
-        "postalCode": 101000,
-        "country": "Россия",
-        "company": "TechSoft",
-        "position": "Frontend-разработчик",
-        "salary": 80000,
-        "startDate": "2020-01-15",
-        "status": "Активен"
-      },
-      {
-        "id": 2,
-        "firstName": "Мария",
-        "lastName": "Петрова",
-        "age": 25,
-        "email": "maria.petrova@example.com",
-        "phone": "098-765-4321",
-        "address": "пр. Мира, д. 20",
-        "city": "Санкт-Петербург",
-        "postalCode": 190000,
-        "country": "Россия",
-        "company": "MarketGuru",
-        "position": "Маркетолог",
-        "salary": 60000,
-        "startDate": "2019-03-22",
-        "endDate": "2021-07-30",
-        "status": "Неактивен"
-      },
-      {
-        "id": 3,
-        "firstName": "Петр",
-        "lastName": "Сидоров",
-        "age": 28,
-        "score": 78,
-        "department": "Поддержка",
-        "position": "Техподдержка",
-        "salary": 50000,
-        "startDate": "2021-05-10",
-        "status": "Активен",
-        "projects": "Поддержка клиентов"
-      },
-      {
-        "id": 4,
-        "firstName": "Елена",
-        "lastName": "Кузнецова",
-        "email": "elena.kuznetsova@example.com",
-        "address": "ул. Советская, д. 15",
-        "phone": "555-1234",
-        "city": "Новосибирск",
-        "postalCode": 630000,
-        "country": "Россия",
-        "company": "DevSolutions",
-        "position": "Fullstack-разработчик",
-        "salary": 90000,
-        "startDate": "2018-07-01",
-        "status": "Активен",
-        "skills": "JavaScript, React, Node.js",
-        "projects": "Разработка веб-приложений"
-      },
-      {
-        "id": 5,
-        "age": 35,
-        "score": 88,
-        "address": "ул. Гагарина, д. 5",
-        "phone": "444-5678",
-        "city": "Екатеринбург",
-        "postalCode": 620000,
-        "country": "Россия",
-        "company": "HRPro",
-        "position": "HR-менеджер",
-        "salary": 70000,
-        "startDate": "2017-11-12",
-        "status": "Активен",
-        "skills": "Найм персонала, Обучение",
-        "projects": "Рекрутинг"
-      },
-      {
-        "id": 6,
-        "firstName": "Алексей",
-        "lastName": "Морозов",
-        "age": 40,
-        "email": "aleksey.morozov@example.com",
-        "phone": "333-222-1111",
-        "address": "ул. Чехова, д. 7",
-        "city": "Казань",
-        "postalCode": 420000,
-        "country": "Россия",
-        "company": "FinancePlus",
-        "position": "Бухгалтер",
-        "salary": 75000,
-        "startDate": "2015-09-18",
-        "status": "Активен"
-      },
-      {
-        "id": 7,
-        "firstName": "Ольга",
-        "lastName": "Семенова",
-        "age": 29,
-        "email": "olga.semenova@example.com",
-        "phone": "777-888-9999",
-        "address": "ул. Лермонтова, д. 12",
-        "city": "Нижний Новгород",
-        "postalCode": 603000,
-        "country": "Россия",
-        "company": "DesignStudio",
-        "position": "Дизайнер",
-        "salary": 65000,
-        "startDate": "2021-02-25",
-        "status": "Активен",
-        "skills": "Photoshop, Illustrator",
-        "projects": "Создание логотипов"
-      },
-      {
-        "id": 8,
-        "firstName": "Сергей","lastName": "Лебедев",
+  "fields": [
+    {
+      "id": "1",
+      "name": "Имя",
+      "key": "firstName",
+      "type": "string"
+    },
+    {
+      "id": "2",
+      "name": "Фамилия",
+      "key": "lastName",
+      "type": "string"
+    },
+    {
+      "id": "3",
+      "name": "Возраст",
+      "key": "age",
+      "type": "number"
+    },
+    {
+      "id": "4",
+      "name": "Email",
+      "key": "email",
+      "type": "string"
+    },
+    {
+      "id": "5",
+      "name": "Номер телефона",
+      "key": "phone",
+      "type": "string"
+    },
+    {
+      "id": "6",
+      "name": "Адрес",
+      "key": "address",
+      "type": "string"
+    },
+    {
+      "id": "7",
+      "name": "Город",
+      "key": "city",
+      "type": "string"
+    },
+    {
+      "id": "8",
+      "name": "Индекс",
+      "key": "postalCode",
+      "type": "number"
+    },
+    {
+      "id": "9",
+      "name": "Страна",
+      "key": "country",
+      "type": "string"
+    },
+    {
+      "id": "10",
+      "name": "Компания",
+      "key": "company",
+      "type": "string"
+    },
+    {
+      "id": "11",
+      "name": "Позиция",
+      "key": "position",
+      "type": "string"
+    },
+    {
+      "id": "12",
+      "name": "Зарплата",
+      "key": "salary",
+      "type": "number"
+    },
+    {
+      "id": "13",
+      "name": "Дата выхода",
+      "key": "startDate",
+      "type": "string"
+    },
+    {
+      "id": "14",
+      "name": "Дата окончания",
+      "key": "endDate",
+      "type": "string"
+    },
+    {
+      "id": "15",
+      "name": "Статус",
+      "key": "status",
+      "type": "string"
+    }
+  ],
+  "newField": [
+    {
+      "id": "1",
+      "name": "Имя",
+      "key": "firstName",
+      "type": "string"
+    },
+    {
+      "id": "2",
+      "name": "Фамилия",
+      "key": "lastName",
+      "type": "string"
+    }
+  ],
+  "records": [
+    {
+      "id": "1",
+      "firstName": "Иван",
+      "lastName": "Иванов",
+      "age": 30,
+      "email": "ivan.ivanov@example.com",
+      "phone": "123-456-7890",
+      "address": "ул. Ленина, д. 10",
+      "city": "Москва",
+      "postalCode": 101000,
+      "country": "Россия",
+      "company": "TechSoft",
+      "position": "Frontend-разработчик",
+      "salary": 80000,
+      "startDate": "2020-01-15",
+      "status": "Активен"
+    },
+    {
+      "id": "2",
+      "firstName": "Мария",
+      "lastName": "Петрова",
+      "age": 25,
+      "email": "maria.petrova@example.com",
+      "phone": "098-765-4321",
+      "address": "пр. Мира, д. 20",
+      "city": "Санкт-Петербург",
+      "postalCode": 190000,
+      "country": "Россия",
+      "company": "MarketGuru",
+      "position": "Маркетолог",
+      "salary": 60000,
+      "startDate": "2019-03-22",
+      "endDate": "2021-07-30",
+      "status": "Неактивен"
+    },
+    {
+      "id": "3",
+      "firstName": "Петр",
+      "lastName": "Сидоров",
+      "age": 28,
+      "score": 78,
+      "department": "Поддержка",
+      "position": "Техподдержка",
+      "salary": 50000,
+      "startDate": "2021-05-10",
+      "status": "Активен",
+      "projects": "Поддержка клиентов"
+    },
+    {
+      "id": "4",
+      "firstName": "Елена",
+      "lastName": "Кузнецова",
+      "email": "elena.kuznetsova@example.com",
+      "address": "ул. Советская, д. 15",
+      "phone": "555-1234",
+      "city": "Новосибирск",
+      "postalCode": 630000,
+      "country": "Россия",
+      "company": "DevSolutions",
+      "position": "Fullstack-разработчик",
+      "salary": 90000,
+      "startDate": "2018-07-01",
+      "status": "Активен",
+      "skills": "JavaScript, React, Node.js",
+      "projects": "Разработка веб-приложений"
+    },
+    {
+      "id": "5",
+      "age": 35,
+      "score": 88,
+      "address": "ул. Гагарина, д. 5",
+      "phone": "444-5678",
+      "city": "Екатеринбург",
+      "postalCode": 620000,
+      "country": "Россия",
+      "company": "HRPro",
+      "position": "HR-менеджер",
+      "salary": 70000,
+      "startDate": "2017-11-12",
+      "status": "Активен",
+      "skills": "Найм персонала, Обучение",
+      "projects": "Рекрутинг"
+    },
+    {
+      "id": "6",
+      "firstName": "Алексей",
+      "lastName": "Морозов",
+      "age": 40,
+      "email": "aleksey.morozov@example.com",
+      "phone": "333-222-1111",
+      "address": "ул. Чехова, д. 7",
+      "city": "Казань",
+      "postalCode": 420000,
+      "country": "Россия",
+      "company": "FinancePlus",
+      "position": "Бухгалтер",
+      "salary": 75000,
+      "startDate": "2015-09-18",
+      "status": "Активен"
+    },
+    {
+      "id": "7",
+      "firstName": "Ольга",
+      "lastName": "Семенова",
+      "age": 29,
+      "email": "olga.semenova@example.com",
+      "phone": "777-888-9999",
+      "address": "ул. Лермонтова, д. 12",
+      "city": "Нижний Новгород",
+      "postalCode": 603000,
+      "country": "Россия",
+      "company": "DesignStudio",
+      "position": "Дизайнер",
+      "salary": 65000,
+      "startDate": "2021-02-25",
+      "status": "Активен",
+      "skills": "Photoshop, Illustrator",
+      "projects": "Создание логотипов"
+    },
+    {
+      "id": "8",
+      "firstName": "Сергей",
+      "lastName": "Лебедев",
       "age": 33,
       "email": "sergey.lebedev@example.com",
       "phone": "666-555-4444",
@@ -154,7 +244,7 @@
       "projects": "Оптимизация маршрутов"
     },
     {
-      "id": 9,
+      "id": "9",
       "firstName": "Татьяна",
       "lastName": "Коваленко",
       "age": 27,
@@ -172,7 +262,7 @@
       "skills": "Обучение, Разработка курсов"
     },
     {
-      "id": 10,
+      "id": "10",
       "firstName": "Дмитрий",
       "lastName": "Фролов",
       "age": 31,
@@ -190,7 +280,7 @@
       "projects": "Клинические исследования"
     },
     {
-      "id": 11,
+      "id": "11",
       "firstName": "Наталья",
       "lastName": "Волкова",
       "age": 26,
@@ -208,7 +298,7 @@
       "projects": "Разработка морских технологий"
     },
     {
-      "id": 12,
+      "id": "12",
       "firstName": "Максим",
       "lastName": "Григорьев",
       "age": 34,
@@ -226,7 +316,7 @@
       "projects": "Оптимизация сельскохозяйственных процессов"
     },
     {
-      "id": 13,
+      "id": "13",
       "firstName": "Алина",
       "lastName": "Кузьмина",
       "age": 24,
@@ -243,7 +333,7 @@
       "status": "Активен"
     },
     {
-      "id": 14,
+      "id": "14",
       "firstName": "Владимир",
       "lastName": "Соколов",
       "age": 38,
@@ -261,7 +351,7 @@
       "projects": "Разработка энергетических решений"
     },
     {
-      "id": 15,
+      "id": "15",
       "firstName": "Светлана",
       "lastName": "Львова",
       "age": 29,
@@ -279,13 +369,14 @@
       "projects": "Исследования в области биохимии"
     },
     {
-      "id": 16,
+      "id": "16",
       "firstName": "Евгений",
       "lastName": "Попов",
       "age": 32,
       "email": "evgeniy.popov@example.com",
       "phone": "222-111-3333",
-      "address": "пр. Карла Маркса, д. 40","city": "Калуга",
+      "address": "пр. Карла Маркса, д. 40",
+      "city": "Калуга",
       "postalCode": 248000,
       "country": "Россия",
       "company": "SpaceTech",
@@ -296,7 +387,7 @@
       "projects": "Разработка космических технологий"
     },
     {
-      "id": 17,
+      "id": "17",
       "firstName": "Олег",
       "lastName": "Мельников",
       "age": 36,
@@ -314,7 +405,7 @@
       "projects": "Анализ больших данных"
     },
     {
-      "id": 18,
+      "id": "18",
       "firstName": "Кристина",
       "lastName": "Николаева",
       "age": 23,
@@ -331,7 +422,7 @@
       "status": "Активен"
     },
     {
-      "id": 19,
+      "id": "19",
       "firstName": "Роман",
       "lastName": "Старков",
       "age": 29,
@@ -349,7 +440,7 @@
       "projects": "Кибербезопасность"
     },
     {
-      "id": 20,
+      "id": "20",
       "firstName": "Антон",
       "lastName": "Борисов",
       "age": 37,
@@ -367,7 +458,7 @@
       "projects": "Солнечные и ветряные энергетические проекты"
     },
     {
-      "id": 21,
+      "id": "21",
       "firstName": "Юлия",
       "lastName": "Зайцева",
       "age": 28,
@@ -384,7 +475,7 @@
       "status": "Активен"
     },
     {
-      "id": 22,
+      "id": "22",
       "firstName": "Герман",
       "lastName": "Егоров",
       "age": 41,
@@ -402,7 +493,7 @@
       "projects": "Генетические исследования"
     },
     {
-      "id": 23,
+      "id": "23",
       "firstName": "Леонид",
       "lastName": "Денисов",
       "age": 39,
@@ -420,7 +511,7 @@
       "projects": "Градостроительные проекты"
     },
     {
-      "id": 24,
+      "id": "24",
       "firstName": "Виктория",
       "lastName": "Моргунова",
       "age": 30,
@@ -432,11 +523,12 @@
       "country": "Россия",
       "company": "MediCare",
       "position": "Медицинский ассистент",
-      "salary": 63000,"startDate": "2021-09-09",
+      "salary": 63000,
+      "startDate": "2021-09-09",
       "status": "Активен"
     },
     {
-      "id": 25,
+      "id": "25",
       "firstName": "Константин",
       "lastName": "Федоров",
       "age": 34,

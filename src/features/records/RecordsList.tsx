@@ -3,6 +3,7 @@ import { useGetFieldsQuery, useGetRecordsQuery } from "../api/apiSlice";
 import InfiniteScroll from "react-infinite-scroll-component";
 import type { Field, Record } from "../../types";
 import { Table } from "antd";
+import "./RecordList.css";
 
 const RecordsList: React.FC = () => {
   const [page, setPage] = useState(0);
@@ -18,24 +19,6 @@ const RecordsList: React.FC = () => {
   const [allRecords, setAllRecords] = useState<Record[]>([]);
 
   const { data: columns } = useGetFieldsQuery();
-
-  // const columns = [
-  //   {
-  //     title: "Name",
-  //     dataIndex: "name",
-  //     key: "name",
-  //   },
-  //   {
-  //     title: "Age",
-  //     dataIndex: "age",
-  //     key: "age",
-  //   },
-  //   {
-  //     title: "Address",
-  //     dataIndex: "address",
-  //     key: "address",
-  //   },
-  // ];
 
   const getAntdRecords = (records: Record[] | undefined) => {
     return records?.map((field) => ({ ...field, key: field.id }));
@@ -63,7 +46,7 @@ const RecordsList: React.FC = () => {
   if (error) return <div>Ошибка при загрузке записей</div>;
 
   return (
-    <div>
+    <div className="recordList">
       <h2>Записи</h2>
       <InfiniteScroll
         dataLength={allRecords.length}
@@ -77,26 +60,6 @@ const RecordsList: React.FC = () => {
           columns={getAntdColumns(columns)}
           pagination={false}
         ></Table>
-        {/* <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Age</th>
-            </tr>
-          </thead>
-          <tbody>
-            {allRecords?.map((record) => (
-              <tr key={record.id}>
-                <td>{record.id}</td>
-                <td>{record.firstName}</td>
-                <td>{record.lastName}</td>
-                <td>{record.age}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table> */}
       </InfiniteScroll>
       {isFetching && page > 1 && <div>Загрузка...</div>}
     </div>
